@@ -52,9 +52,15 @@
             "tsConfig": "projects/iban-nicaragua-app/tsconfig.app.json",
             "assets": [
               "projects/iban-nicaragua-app/src/favicon.ico",
-              "projects/iban-nicaragua-app/src/assets"
+              "projects/iban-nicaragua-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ngx-iban-nicaragua/assets",
+                "output": "/assets/"
+              }
             ],
-            "styles": [
+            "styles": [              
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/iban-nicaragua-app/src/styles.css"
             ],
             "scripts": []
@@ -124,5 +130,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
